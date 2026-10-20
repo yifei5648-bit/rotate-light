@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rotate Light — 三环旋转灯具的数字交互概念与视频演示。">
+  <title>Rotate Light — Interactive Mood Study</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header><a href="#main" class="wordmark">ROTATE LIGHT<span class="dot"></span></a><span class="category">PRODUCT × INTERACTION</span><button id="demo-mode" aria-pressed="false">Demo Mode</button></header>
+  <main id="main">
+    <section class="intro"><p class="eyebrow">AN INTERACTIVE LIGHT STUDY / 2026</p><h1>One light. <br>Endless compositions.</h1><p class="lead">旋转三个同心环，重新组织色彩与光的氛围。</p></section>
+    <section class="workspace" aria-label="Rotate Light 交互演示">
+      <div class="stage">
+        <div class="stage-top"><span>01 / DIGITAL COMPOSITION</span><span id="stage-state">MANUAL</span></div>
+        <svg viewBox="0 0 500 500" role="img" aria-labelledby="lamp-title lamp-desc"><title id="lamp-title">Rotate Light 三环数字示意</title><desc id="lamp-desc">用右侧滑块分别调整三个同心环的角度。此图不模拟真实光学效果。</desc><defs><filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-opacity=".08"/></filter></defs><g filter="url(#shadow)" class="ring" id="ring-0"><circle cx="250" cy="250" r="184" class="ring-base" stroke-width="46"/><circle cx="250" cy="250" r="184" fill="none" stroke="#efc848" stroke-width="46" stroke-dasharray="578.05 578.05"/></g><g filter="url(#shadow)" class="ring" id="ring-1"><circle cx="250" cy="250" r="133" class="ring-base" stroke-width="46"/><circle cx="250" cy="250" r="133" fill="none" stroke="#e84632" stroke-width="46" stroke-dasharray="417.83 417.83"/></g><g filter="url(#shadow)" class="ring" id="ring-2"><circle cx="250" cy="250" r="82" class="ring-base" stroke-width="46"/><circle cx="250" cy="250" r="82" fill="none" stroke="#3156db" stroke-width="46" stroke-dasharray="257.61 257.61"/></g><circle cx="250" cy="250" r="37" fill="#f6f5ef"/></svg>
+        <div class="stage-bottom"><span>THREE RINGS. YOUR COMPOSITION.</span><span>2D INTERACTION STUDY</span></div>
+      </div>
+      <aside class="controls">
+        <p class="eyebrow">02 / COMPOSE THE LIGHT</p><h2>Make your move.</h2><p class="hint">拖动滑块，观察三个环的关系。</p>
+        <div class="slider-row yellow"><label for="angle-0">RING 01 <output id="value-0" for="angle-0">088°</output></label><input id="angle-0" type="range" min="0" max="360" value="88"></div>
+        <div class="slider-row red"><label for="angle-1">RING 02 <output id="value-1" for="angle-1">198°</output></label><input id="angle-1" type="range" min="0" max="360" value="198"></div>
+        <div class="slider-row blue"><label for="angle-2">RING 03 <output id="value-2" for="angle-2">064°</output></label><input id="angle-2" type="range" min="0" max="360" value="64"></div>
+        <div class="moods"><p class="eyebrow">03 / MOOD MAPPING</p><div class="mood-buttons"><button data-mood="calm" aria-pressed="false">Calm</button><button data-mood="energetic" aria-pressed="false">Energetic</button><button data-mood="focused" aria-pressed="false">Focused</button></div><p id="mood-description" role="status">自由调整角度，寻找属于你的色彩构成。</p><small>RULE-BASED CONCEPT · NO AI API</small></div>
+        <div class="actions"><button id="play" class="primary">Play Demo ↗</button><button id="reset">Reset</button></div>
+      </aside>
+    </section>
+    <section class="film-section" aria-labelledby="film-title">
+      <div class="film-heading"><div><p class="eyebrow">04 / PHYSICAL MOOD STUDY</p><h2 id="film-title">From mood to movement.</h2></div><p>选择上方 Mood，跳转到对应的实体模型动画。</p></div>
+      <div class="film-layout"><div class="film-player"><video id="physical-video" controls playsinline preload="metadata" poster="assets/mood-poster.png"><source src="assets/rotate-light-moods.mp4" type="video/mp4">浏览器不支持视频，请使用下方下载链接。</video><p id="film-status" role="status">18 SEC · ORIGINAL 3D MODEL · CALM → ENERGETIC → FOCUSED</p></div><aside class="film-notes"><p class="eyebrow">THE SAME THREE RINGS</p><h3>One object.<br>Three atmospheres.</h3><p>黄、红、蓝三层模型独立旋转，展示不同色彩朝向与组合。</p><ol><li><button data-film-time="0">00:00 <strong>Calm</strong><span>舒展 / 分散</span></button></li><li><button data-film-time="4">00:04 <strong>Energetic</strong><span>聚集 / 活跃</span></button></li><li><button data-film-time="10">00:10 <strong>Focused</strong><span>同向 / 集中</span></button></li></ol><p class="hint">基于原始 Blender 模型的数字渲染。Mood 为视觉构成概念，不代表真实情绪识别或照明测试。</p><a href="assets/rotate-light-moods.mp4" download>Download film ↓</a></aside></div>
+    </section>
+    <section class="physical"><img src="assets/rotate-light-room.png" alt="Rotate Light 实体设计的室内场景渲染，灯具放置于金属边柜上" loading="lazy"><div><p class="eyebrow">FROM OBJECT TO INTERACTION</p><h2>Physical → Digital</h2><p>三层同心环可独立旋转。数字版本将实体旋转映射为角度控制，让色彩构成成为可以探索的交互。</p><dl><div><dt>DIMENSIONS</dt><dd>H 15 cm · Ø 30 cm</dd></div><div><dt>MATERIAL</dt><dd>Plexiglass / Acrylic</dd></div></dl><p class="hint">上方圆环是平面交互示意；模型视频与原始场景图用于展示实体造型。</p></div></section>
+    <figure class="detail-photo"><img src="assets/rotate-light-detail.png" alt="Rotate Light 三层彩色灯罩的近景渲染" loading="lazy"><figcaption>ORIGINAL PRODUCT RENDER / ACRYLIC · COLOR · LIGHT</figcaption></figure>
+  </main>
+  <footer><span>DESIGNED BY YIFEI WANG</span><span>YIFEI WANG · PORTFOLIO 2026</span></footer>
+</body>
+</html>
